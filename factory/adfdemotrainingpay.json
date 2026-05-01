@@ -1,0 +1,15 @@
+{
+	"name": "adfdemotrainingpay",
+	"properties": {
+		"trustModeClaimForMi": {
+			"value": "Enabled",
+			"editable": true
+		}
+	},
+	"location": "centralindia",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "0fb00758-5bcd-4ec4-ad52-be5a09a51bf4",
+		"tenantId": "2ac7de49-3ebb-408a-b3b8-61ace9cfd97a"
+	}
+}
