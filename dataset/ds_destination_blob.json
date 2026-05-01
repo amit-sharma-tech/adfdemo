@@ -1,0 +1,22 @@
+{
+	"name": "ds_destination_blob",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_adfdemo",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"container": "destinationpath"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": []
+	}
+}
