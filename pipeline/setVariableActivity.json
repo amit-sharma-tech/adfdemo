@@ -1,0 +1,77 @@
+{
+	"name": "setVariableActivity",
+	"properties": {
+		"activities": [
+			{
+				"name": "Set Lenght",
+				"type": "SetVariable",
+				"dependsOn": [],
+				"policy": {
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"variableName": "Lenght",
+					"value": "10"
+				}
+			},
+			{
+				"name": "Set Breath",
+				"type": "SetVariable",
+				"dependsOn": [],
+				"policy": {
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"variableName": "Breath",
+					"value": "5"
+				}
+			},
+			{
+				"name": "Final result",
+				"type": "SetVariable",
+				"dependsOn": [
+					{
+						"activity": "Set Lenght",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					},
+					{
+						"activity": "Set Breath",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"variableName": "Area",
+					"value": {
+						"value": "@{MUL(INT(variables('Lenght')),INT(variables('Breath')))}",
+						"type": "Expression"
+					}
+				}
+			}
+		],
+		"variables": {
+			"Lenght": {
+				"type": "String"
+			},
+			"Breath": {
+				"type": "String"
+			},
+			"Area": {
+				"type": "String"
+			}
+		},
+		"annotations": []
+	}
+}
