@@ -1,0 +1,30 @@
+{
+	"name": "ds_output_container",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_adfdemo",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"containerNameInDS": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"container": {
+					"value": "@dataset().containerNameInDS",
+					"type": "Expression"
+				}
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": []
+	}
+}
