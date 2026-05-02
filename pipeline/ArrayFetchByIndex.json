@@ -1,0 +1,39 @@
+{
+	"name": "ArrayFetchByIndex",
+	"properties": {
+		"activities": [
+			{
+				"name": "Set variable1",
+				"type": "SetVariable",
+				"dependsOn": [],
+				"policy": {
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"variableName": "ADF Marks",
+					"value": {
+						"value": "@string(variables('Marks')[0])",
+						"type": "Expression"
+					}
+				}
+			}
+		],
+		"variables": {
+			"Marks": {
+				"type": "Array",
+				"defaultValue": [
+					90,
+					78,
+					40,
+					50
+				]
+			},
+			"ADF Marks": {
+				"type": "String"
+			}
+		},
+		"annotations": []
+	}
+}
