@@ -1,0 +1,30 @@
+{
+	"name": "ds_fetchTable",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_sqlserverconnection01",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "DEPTNO",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "DNAME",
+				"type": "nvarchar"
+			},
+			{
+				"name": "LOC",
+				"type": "varchar"
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "dept"
+		}
+	}
+}
