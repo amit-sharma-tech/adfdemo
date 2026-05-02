@@ -1,0 +1,18 @@
+{
+	"name": "FailedActivity",
+	"properties": {
+		"activities": [
+			{
+				"name": "Fail1",
+				"type": "Fail",
+				"dependsOn": [],
+				"userProperties": [],
+				"typeProperties": {
+					"message": "Pipeline failed intentionally",
+					"errorCode": "555"
+				}
+			}
+		],
+		"annotations": []
+	}
+}
